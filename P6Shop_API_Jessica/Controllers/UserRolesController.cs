@@ -14,6 +14,7 @@ namespace P6Shop_API_Jessica.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [ApiKey]
+
     public class UserRolesController : ControllerBase
     {
         private readonly P6SHOPPINGContext _context;
@@ -25,6 +26,7 @@ namespace P6Shop_API_Jessica.Controllers
 
         // GET: api/UserRoles
         [HttpGet]
+        
         public async Task<ActionResult<IEnumerable<UserRole>>> GetUserRoles()
         {
             return await _context.UserRoles.ToListAsync();
@@ -32,6 +34,7 @@ namespace P6Shop_API_Jessica.Controllers
 
         // GET: api/UserRoles/5
         [HttpGet("{id}")]
+        
         public async Task<ActionResult<UserRole>> GetUserRole(int id)
         {
             var userRole = await _context.UserRoles.FindAsync(id);
@@ -47,6 +50,7 @@ namespace P6Shop_API_Jessica.Controllers
         // PUT: api/UserRoles/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        
         public async Task<IActionResult> PutUserRole(int id, UserRole userRole)
         {
             if (id != userRole.IduserRole)
@@ -78,6 +82,7 @@ namespace P6Shop_API_Jessica.Controllers
         // POST: api/UserRoles
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        
         public async Task<ActionResult<UserRole>> PostUserRole(UserRole userRole)
         {
             _context.UserRoles.Add(userRole);
@@ -88,6 +93,7 @@ namespace P6Shop_API_Jessica.Controllers
 
         // DELETE: api/UserRoles/5
         [HttpDelete("{id}")]
+        
         public async Task<IActionResult> DeleteUserRole(int id)
         {
             var userRole = await _context.UserRoles.FindAsync(id);
