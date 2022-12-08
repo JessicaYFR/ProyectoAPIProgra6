@@ -15,6 +15,7 @@ public class Program
 
         //Obtenemos la info de la cadena de conexión desde el archivo
         //appsettings.json el nombre de la etiqueta CNNSTR
+       
         var CnnStrBuilder = new SqlConnectionStringBuilder(
             builder.Configuration.GetConnectionString("CNNSTR"));
         

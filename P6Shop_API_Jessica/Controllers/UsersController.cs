@@ -13,7 +13,7 @@ namespace P6Shop_API_Jessica.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-   // [ApiKey]
+    //[ApiKey]
     public class UsersController : ControllerBase
     {
         private readonly P6SHOPPINGContext _context;
